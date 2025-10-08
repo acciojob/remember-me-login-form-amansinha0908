@@ -1,4 +1,4 @@
-//your JS code here. If required.
+// your JS code here. If required.
 (function () {
   const form = document.getElementById("login-form");
   const usernameInput = document.getElementById("username");
@@ -15,7 +15,6 @@
   }
 
   window.addEventListener("DOMContentLoaded", () => {
-    // Ensure initial expectations: empty fields & unchecked checkbox
     usernameInput.value = "";
     passwordInput.value = "";
     rememberCheckbox.checked = false;
@@ -28,7 +27,7 @@
     const username = usernameInput.value.trim();
     const password = passwordInput.value;
 
-    alert(Logged in as ${username});
+    alert(`Logged in as ${username}`);
 
     if (rememberCheckbox.checked) {
       localStorage.setItem("username", username);
@@ -44,7 +43,7 @@
   existingBtn.addEventListener("click", () => {
     const savedUsername = localStorage.getItem("username");
     if (savedUsername) {
-      alert(Logged in as ${savedUsername});
+      alert(`Logged in as ${savedUsername}`);
     }
   });
 })();
